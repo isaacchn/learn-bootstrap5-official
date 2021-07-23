@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>01 Grid</title>
+        <style>
+            .row > [class^="col"] {
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+                background-color: rgba(39, 41, 43, 0.03);
+                border: 1px solid rgba(39, 41, 43, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    Column 1
+                </div>
+                <div class="col">
+                    Column 2
+                </div>
+                <div class="col">
+                    Column 2
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    1 of 2
+                </div>
+                <div class="col">
+                    2 of 2
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col">
+                    2 of 3
+                </div>
+                <div class="col">
+                    3 of 3
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col-6">
+                    2 of 3 (wider col-6)
+                </div>
+                <div class="col">
+                    3 of 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col-5">
+                    2 of 3 (wider col-5)
+                </div>
+                <div class="col">
+                    3 of 3
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-2">
+                    1 of 3
+                </div>
+                <div class="col-md-auto">
+                    2 of 3 Variable width
+                </div>
+                <div class="col col-lg-2">
+                    3 of 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    1 of 3
+                </div>
+                <div class="col-md-auto">
+                    2 of 3 Variable width
+                </div>
+                <div class="col col-lg-2">
+                    3 of 3
+                </div>
+            </div>
+        </div>
+        <!--从最小的设备到最大的设备都一样的网格，使用.col和.col-*类-->
+        <div class="container">
+            <div class="row">
+                <div class="col">col</div>
+                <div class="col">col</div>
+                <div class="col">col</div>
+                <div class="col">col</div>
+            </div>
+            <div class="row">
+                <div class="col-8">col-8</div>
+                <div class="col-4">col-4</div>
+            </div>
+        </div>
+        <!--使用一组.col-sm-*类，创建一个基本的网格系统，开始时是堆叠的，当在小的屏幕断言（sm）处就变成水平的-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">col-sm-8</div>
+                <div class="col-sm-4">col-sm-4</div>
+            </div>
+            <div class="row">
+                <div class="col-sm">col-sm</div>
+                <div class="col-sm">col-sm</div>
+                <div class="col-sm">col-sm</div>
+            </div>
+        </div>
+        <!--混合搭配-->
+        <div class="container">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+                <div class="col-md-8">.col-md-8</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+                <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+            </div>
+
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <div class="col-6">.col-6</div>
+                <div class="col-6">.col-6</div>
+            </div>
+        </div>
+        <!--行列-->
+        <!--使用响应的.row-cols-*类来快速设置列数-->
+        <h3>行列</h3>
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-cols-4">
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col-6">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+        <script src="../bootstrap-5.0.2/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
